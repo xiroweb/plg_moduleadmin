@@ -18,13 +18,16 @@
                 <folder>helper</folder>
         </files>
         <media destination="plg_system_moduleadmin"
-		folder="media">
-		<folder>js</folder>
-	</media>
+    		folder="media">
+    		<folder>js</folder>
+    	</media>
         <languages>
-          <language tag="en-GB">language/en-GB/en-GB.plg_system_moduleadmin.ini</language>
-          <language tag="en-GB">language/en-GB/en-GB.plg_system_moduleadmin.sys.ini</language>
-          <language tag="vi-VN">language/vi-VN/vi-VN.plg_system_moduleadmin.ini</language>
-          <language tag="vi-VN">language/vi-VN/vi-VN.plg_system_moduleadmin.sys.ini</language>
+            <language tag="en-GB">language/en-GB/en-GB.plg_system_moduleadmin.ini</language>
+            <language tag="en-GB">language/en-GB/en-GB.plg_system_moduleadmin.sys.ini</language>
+            <language tag="vi-VN">language/vi-VN/vi-VN.plg_system_moduleadmin.ini</language>
+            <language tag="vi-VN">language/vi-VN/vi-VN.plg_system_moduleadmin.sys.ini</language>
         </languages>
+        <updateservers>
+            <server type="extension" priority="1" name="Update XiroWeb plugin Module Admin">https://raw.githubusercontent.com/xiroweb/updateserver/master/plugins/plg_system_moduleadmin/update.xml</server>
+        </updateservers>
 </extension>

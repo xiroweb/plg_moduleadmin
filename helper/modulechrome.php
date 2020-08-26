@@ -23,7 +23,7 @@ function modChrome_outlinemodal($module, &$params, &$attribs)
 	$app = JFactory::getApplication();
 	$function  = $app->input->getCmd('function', 'jSelectModuleadmin');
 	//$onclick   = $this->escape($function);
-	$morexx = new HtmlView();
+	$htmlview = new HtmlView();
 	$onclick   = $morexx->escape($function);
 	static $css = false;
 
@@ -84,14 +84,13 @@ function modChrome_outlinemodal($module, &$params, &$attribs)
 	}
 	?>
 	  <?php 
-                                $link = '';
-                                $attribs = 'data-function="' . $morexx->escape($onclick) . '"'
-								. ' data-id="' . $module->position. '"'
-								. ' data-title="' .  $module->position . '"'
-								. ' data-uri="' . $link . '"'
-                                ;
-                                ?>
-
+        $link = '';
+        $attribs = 'data-function="' . $htmlview->escape($onclick) . '"'
+		. ' data-id="' . $module->position. '"'
+		. ' data-title="' .  $module->position . '"'
+		. ' data-uri="' . $link . '"'
+        ;
+        ?>
 	<div class="mod-preview">
 		<div class="mod-preview-info">
 			<div class="mod-preview-position">

@@ -1,11 +1,5 @@
 (function() {
 	"use strict";
-	/**
-	 * Javascript to set up onclick listeners on the helloworld greetings
-	 * When a greeting is clicked the listener invokes the function in the parent window
-	 * which is given by the data-function attribute of the helloworld greeting html element
-	 * In this way the identity of the helloworld record selected in the modal is passed to the field in the parent window
-	 */
 
 	document.addEventListener('DOMContentLoaded', function(){
 		

@@ -79,8 +79,7 @@ class plgSystemModuleadmin extends JPlugin
 
 		$app = \JFactory::getApplication();
 
-		// repace new value
-		// Factory::getApplication()->isClient('administrator')
+		
 		if ($app->input->getBool('positionmodal'))
 		{
 			include_once __DIR__ . '/helper/modulechrome.php';
