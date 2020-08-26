@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.3.0" type="plugin" group="system" method="upgrade">
+        <name>plg_system_moduleadmin</name>
+        <author>Dustin Dzung</author>
+        <creationDate>August 2020</creationDate>
+        <copyright>Copyright (C) 2020 XiroWeb. All rights reserved.</copyright>
+        <license>GNU General Public License version 2 or later;</license>
+        <authorEmail>support@xiroweb.com</authorEmail>
+        <authorUrl>www.xiroweb.com</authorUrl>
+        <version>1.0.6</version>
+        <description>PLG_SYSTEM_MODULEADMIN_DESCRIPTION</description>
+        <files>
+                <filename plugin="moduleadmin">moduleadmin.php</filename>
+                <filename>index.html</filename>
+                <folder>fields</folder>
+                <folder>form</folder>
+                <folder>rules</folder>
+                <folder>helper</folder>
+        </files>
+        <media destination="plg_system_moduleadmin"
+    		folder="media">
+    		<folder>js</folder>
+    	</media>
+        <languages>
+            <language tag="en-GB">language/en-GB/en-GB.plg_system_moduleadmin.ini</language>
+            <language tag="en-GB">language/en-GB/en-GB.plg_system_moduleadmin.sys.ini</language>
+            <language tag="vi-VN">language/vi-VN/vi-VN.plg_system_moduleadmin.ini</language>
+            <language tag="vi-VN">language/vi-VN/vi-VN.plg_system_moduleadmin.sys.ini</language>
+        </languages>
+        <updateservers>
+            <server type="extension" priority="1" name="Update XiroWeb plugin Module Admin">https://raw.githubusercontent.com/xiroweb/updateserver/master/plugins/plg_system_moduleadmin/update.xml</server>
+        </updateservers>
+</extension>
