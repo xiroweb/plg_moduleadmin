@@ -16,13 +16,14 @@ use Joomla\CMS\Factory;
 use Joomla\CMS\Plugin\PluginHelper;
 use Joomla\CMS\Component\ComponentHelper;
 
+
 class plgSystemModuleadmin extends JPlugin
 {
 
 
 	protected $autoloadLanguage = true;
 
-	
+
     	/**
 	 * Constructor.
 	 *
@@ -84,7 +85,8 @@ class plgSystemModuleadmin extends JPlugin
 		{
 			include_once __DIR__ . '/helper/modulechrome.php';
 
-			$attribs['style'] .= ' outlinemodal';
+			$attribs['style'] = str_replace('outline', 'outlinemodal', $attribs['style']);
+
 		}
 
 		return true;

@@ -40,15 +40,15 @@ function modChrome_outlinemodal($module, &$params, &$attribs)
 			margin: 8px 0;
 		}
 		.mod-preview-info {
-			padding: 4px 6px;
-			margin-bottom: 5px;
-			font-family: Arial, sans-serif;
-			font-size: .75rem;
-			line-height: 1rem;
-			color: white;
-			background-color: #33373f;
-			border-radius: 3px;
-			box-shadow: 0 -10px 20px rgba(0,0,0,.2) inset;
+		    padding: 4px 6px;
+		    margin-bottom: 5px;
+		    font-family: Arial, sans-serif;
+		    font-size: .75rem;
+		    line-height: 1rem;
+		    color: white;
+		    background-color: transparent;
+		    border-radius: 3px;
+		    /* box-shadow: 0 -10px 20px rgba(0,0,0,.2) inset; */
 		}
 		.mod-preview-info span {
 			font-weight: bold;
@@ -56,6 +56,29 @@ function modChrome_outlinemodal($module, &$params, &$attribs)
 		}
 		.mod-preview-wrapper {
 			margin-bottom: .5rem;
+		}
+		a.select-link {
+		    color: #fff;
+		    font-size: 18px;
+		    border: 1px solid #bdbdbd;
+		    border-radius: 6px;
+		    padding: 10px;
+		    display: block;
+		    background: #0D47A1;
+	        box-shadow: 0 3px 6px rgba(0,0,0,.16), 0 3px 6px rgba(0,0,0,.23);
+		    transition: all ease-in-out 0.3s;
+		    -moz-transition: all ease-in-out 0.3s;
+		    -ms-transition: all ease-in-out 0.3s;
+		    -o-transition: all ease-in-out 0.3s;
+		    -webkit-transition: all ease-in-out 0.3s;
+		}
+		a.select-link:hover {
+	      box-shadow: 0 14px 28px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.22);
+		    transition: all ease-in-out 0.3s;
+		    -moz-transition: all ease-in-out 0.3s;
+		    -ms-transition: all ease-in-out 0.3s;
+		    -o-transition: all ease-in-out 0.3s;
+		    -webkit-transition: all ease-in-out 0.3s;
 		}
 		');
 	}
@@ -71,14 +94,10 @@ function modChrome_outlinemodal($module, &$params, &$attribs)
 
 	<div class="mod-preview">
 		<div class="mod-preview-info">
-			<div class="mod-preview-position aah hah yeah"> aaaa v
-					<a class="select-link" href="javascript:void(0)" <?php echo $attribs; ?>>
-							<?php echo $module->position; ?>
-                                </a>
-				<?php echo JText::sprintf('JGLOBAL_PREVIEW_POSITION', $module->position); ?>
-			</div>
-			<div class="mod-preview-style">
-				<?php echo JText::sprintf('JGLOBAL_PREVIEW_STYLE', $module->style); ?>
+			<div class="mod-preview-position">
+				<a class="select-link" href="javascript:void(0)" <?php echo $attribs; ?>>
+					<?php echo $module->position; ?>
+                </a>
 			</div>
 		</div>
 		<div class="mod-preview-wrapper">
