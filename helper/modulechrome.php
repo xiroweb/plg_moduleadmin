@@ -24,7 +24,7 @@ function modChrome_outlinemodal($module, &$params, &$attribs)
 	$function  = $app->input->getCmd('function', 'jSelectModuleadmin');
 	//$onclick   = $this->escape($function);
 	$htmlview = new HtmlView();
-	$onclick   = $morexx->escape($function);
+	$onclick   = $htmlview->escape($function);
 	static $css = false;
 
 	if (!$css)
