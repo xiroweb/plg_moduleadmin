@@ -65,7 +65,7 @@ class plgSystemModuleadmin extends JPlugin
 		}
 
 		FormHelper::addFieldPath(__DIR__ . '/fields');
-		//$form->addRulePath(JPATH_COMPONENT.'/models/rules');
+		FormHelper::addRulePath(__DIR__ . '/rules');
 		Form::addFormPath(__DIR__ . '/form');
 		$form->loadFile('module',true);
 

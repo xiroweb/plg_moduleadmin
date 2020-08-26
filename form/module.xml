@@ -8,6 +8,7 @@
 			description="PLG_SYSTEM_MODULEADMIN_FIELD_POSITION_DESC"
 			default=""
 			maxlength="50"
+			validate="positionrule"
 		/>
 	</fieldset>
 </form>

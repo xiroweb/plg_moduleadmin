@@ -34,7 +34,7 @@ class JFormFieldLayoutpos extends JFormField {
 
 		$title = empty($value) ? '' : htmlspecialchars($value, ENT_QUOTES, 'UTF-8');	
 		$html  = '<span class="input-append">';
-		$html .= '<input class="input-medium" id="' . $this->id . '_name" type="text" value="' . $title . '" disabled="disabled" size="35" />';
+		$html .= '<input class="input-medium" id="' . $this->id . '_name" type="hidden" value="' . $title . '" disabled="disabled" size="35" />';
 
 		// html for the Select button
 		$html .= '<a'
@@ -80,11 +80,11 @@ class JFormFieldLayoutpos extends JFormField {
 			)
 		);
 
-		// class='required' for client side validation.
+		
 		$class = $this->required ? ' class="required modal-value"' : '';
 
-		// hidden input field to store the helloworld record id
-		$html .= '<input type="hidden" id="' . $this->id . '_id" ' . $class 
+		
+		$html .= '<input type="text" id="' . $this->id . '_id" ' . $class 
 			. ' data-required="' . (int) $this->required . '" name="' . $this->name
 			. '" value="' . $value . '" />';
 
