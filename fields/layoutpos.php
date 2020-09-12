@@ -14,6 +14,8 @@ class JFormFieldLayoutpos extends JFormField {
 
 	protected function getInput() {
 
+		$app = JFactory::getApplication();
+
 		JFactory::getLanguage()->load('plg_system_moduleadmin',JPATH_SITE);
 
 		// $this->value is set if there's a default id specified in the xml file
@@ -60,6 +62,12 @@ class JFormFieldLayoutpos extends JFormField {
 
 		// url for the iframe
 		$linkModuleadmins = JUri::root().'index.php?tp=1&positionmodal=1&amp;' . JSession::getFormToken() . '=1';
+
+		$templatestyle = $app->getUserState('com_modules.edit.module.templatestyle', 0);
+		if ($templatestyle) {
+			$linkModuleadmins .= '&templateStyle=' . $templatestyle;
+		}
+
 		$urlSelect = $linkModuleadmins . '&amp;function=jSelectModuleadmin_' . $this->id;
         
 		// title to go in the modal header
