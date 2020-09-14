@@ -63,7 +63,7 @@ class JFormFieldLayoutpos extends JFormField {
 		// url for the iframe
 		$linkModuleadmins = JUri::root().'index.php?tp=1&positionmodal=1&amp;' . JSession::getFormToken() . '=1';
 
-		$templatestyle = $app->getUserState('com_modules.edit.module.templatestyle', 0);
+		$templatestyle = $app->getUserState('com_modules.module.templatestyle', 0);
 		if ($templatestyle) {
 			$linkModuleadmins .= '&templateStyle=' . $templatestyle;
 		}
