@@ -8,8 +8,6 @@
 
 defined('_JEXEC') or die;
 
-use Joomla\CMS\Filter\InputFilter;
-
 /**
  * Form Rule class for the Position.
  *
