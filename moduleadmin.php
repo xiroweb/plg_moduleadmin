@@ -16,45 +16,24 @@ use Joomla\CMS\Factory;
 use Joomla\CMS\Plugin\PluginHelper;
 use Joomla\CMS\Component\ComponentHelper;
 
-
 class plgSystemModuleadmin extends JPlugin
 {
 
-
 	protected $autoloadLanguage = true;
 
-
-    	/**
-	 * Constructor.
-	 *
-	 * @param 	$subject
-	 * @param	array $config
-	 */
-	function __construct(&$subject, $config = array()) {
+	function __construct(&$subject, $config = array()) 
+	{
 		// call parent constructor
 		parent::__construct($subject, $config);
 
-		$app = \JFactory::getApplication();
-		if ($app->input->getBool('positionmodal'))
+		$app = Factory::getApplication();
+		if ($app->input->getBool('positionmodal', 0))
 		{
 			ComponentHelper::getParams('com_templates')->set('template_positions_display',1);
 		}
 
 	}
 
-
-
-
-	/**
-	 * Adds additional fields to the user editing form
-	 *
-	 * @param   Form   $form  The form to be altered.
-	 * @param   mixed  $data  The associated data for the form.
-	 *
-	 * @return  boolean
-	 *
-	 * @since   1.6
-	 */
 	public function onContentPrepareForm(Form $form, $data)
 	{
 
@@ -76,9 +55,7 @@ class plgSystemModuleadmin extends JPlugin
 	public function onRenderModule($module, &$attribs)
 	{
 
-
-		$app = \JFactory::getApplication();
-
+		$app = Factory::getApplication();
 		
 		if ($app->input->getBool('positionmodal'))
 		{
@@ -89,7 +66,6 @@ class plgSystemModuleadmin extends JPlugin
 		}
 
 		return true;
-
 
 	}
         
