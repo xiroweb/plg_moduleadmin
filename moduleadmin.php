@@ -68,5 +68,19 @@ class plgSystemModuleadmin extends JPlugin
 		return true;
 
 	}
+
+		/**
+	 * Overide core
+	 **/
+
+	public function onAfterRoute() {
+
+		$app = Factory::getApplication();
+		
+		if('com_modules' == $app->input->getCMD('option') && $app->isClient('administrator')()) {
+			JLoader::register('ModulesControllerModules', __DIR__ . '/helper/com_modules/controllers/modules.php');
+			JLoader::register('ModulesModelModules', __DIR__ . '/helper/com_modules/models/modules.php');
+		}
+	}
         
 }
