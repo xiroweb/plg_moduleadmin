@@ -39,11 +39,18 @@ class plgSystemModuleadmin extends JPlugin
 
 		$name = $form->getName();
 
+		// form for view com_module
+		if (in_array($name, array('com_modules.modules.filter'))) {
+			Form::addFormPath(__DIR__ . '/helper/com_modules/models/forms');
+			$form->loadFile('filter_modules_xiroweb',true);
+		}
+
 		if (!in_array($name, array('com_modules.module')))
 		{
 			return true;
 		}
 
+		// form for edit module
 		FormHelper::addFieldPath(__DIR__ . '/fields');
 		FormHelper::addRulePath(__DIR__ . '/rules');
 		Form::addFormPath(__DIR__ . '/form');
@@ -77,7 +84,7 @@ class plgSystemModuleadmin extends JPlugin
 
 		$app = Factory::getApplication();
 		
-		if('com_modules' == $app->input->getCMD('option') && $app->isClient('administrator')()) {
+		if('com_modules' == $app->input->getCMD('option') && $app->isClient('administrator')) {
 			JLoader::register('ModulesControllerModules', __DIR__ . '/helper/com_modules/controllers/modules.php');
 			JLoader::register('ModulesModelModules', __DIR__ . '/helper/com_modules/models/modules.php');
 		}

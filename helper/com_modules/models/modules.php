@@ -68,7 +68,7 @@ class ModulesModelModules extends JModelList
 	 *
 	 * @since   1.6
 	 */
-	protected function populateState($ordering = 'a.position', $direction = 'asc')
+	protected function populateState($ordering = 'a.ordering', $direction = 'asc')
 	{
 		$app = JFactory::getApplication();
 
@@ -168,7 +168,7 @@ class ModulesModelModules extends JModelList
 	 */
 	protected function _getList($query, $limitstart = 0, $limit = 0)
 	{
-		$listOrder = $this->getState('list.ordering', 'a.position');
+		$listOrder = $this->getState('list.ordering', 'a.ordering');
 		$listDirn  = $this->getState('list.direction', 'asc');
 
 		// If ordering by fields that need translate we need to sort the array of objects after translating them.
