@@ -77,7 +77,7 @@ class plgSystemModuleadmin extends JPlugin
 
 		$app = Factory::getApplication();
 		
-		if('com_modules' == $app->input->getCMD('option') && $app->isClient('administrator')()) {
+		if('com_modules' == $app->input->getCMD('option') && $app->isClient('administrator')) {
 			JLoader::register('ModulesControllerModules', __DIR__ . '/helper/com_modules/controllers/modules.php');
 			JLoader::register('ModulesModelModules', __DIR__ . '/helper/com_modules/models/modules.php');
 		}
