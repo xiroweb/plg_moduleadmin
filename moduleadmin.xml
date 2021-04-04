@@ -28,4 +28,7 @@
             <language tag="vi-VN">language/vi-VN/vi-VN.plg_system_moduleadmin.ini</language>
             <language tag="vi-VN">language/vi-VN/vi-VN.plg_system_moduleadmin.sys.ini</language>
         </languages>
+         <updateservers>
+            <server type="extension" name="Update XiroWeb plugin Moduleadmin">https://updateserver.xiroweb.com/plugins/plg_system_moduleadmin/update.xml</server>
+        </updateservers>
 </extension>
