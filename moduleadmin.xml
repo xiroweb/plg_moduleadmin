@@ -7,7 +7,7 @@
         <license>GNU General Public License version 2 or later;</license>
         <authorEmail>support@xiroweb.com</authorEmail>
         <authorUrl>www.xiroweb.com</authorUrl>
-        <version>1.1.5</version>
+        <version>1.1.6</version>
         <description>PLG_SYSTEM_MODULEADMIN_DESCRIPTION</description>
         <files>
                 <filename plugin="moduleadmin">moduleadmin.php</filename>
@@ -28,4 +28,7 @@
             <language tag="vi-VN">language/vi-VN/vi-VN.plg_system_moduleadmin.ini</language>
             <language tag="vi-VN">language/vi-VN/vi-VN.plg_system_moduleadmin.sys.ini</language>
         </languages>
+         <updateservers>
+            <server type="extension" name="Update XiroWeb plugin Moduleadmin">https://updateserver.xiroweb.com/plugins/plg_system_moduleadmin/update.xml</server>
+        </updateservers>
 </extension>
