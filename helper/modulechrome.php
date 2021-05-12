@@ -48,7 +48,6 @@ function modChrome_outlinemodal($module, &$params, &$attribs)
 		    color: white;
 		    background-color: transparent;
 		    border-radius: 3px;
-		    /* box-shadow: 0 -10px 20px rgba(0,0,0,.2) inset; */
 		}
 		.mod-preview-info span {
 			font-weight: bold;
@@ -56,6 +55,12 @@ function modChrome_outlinemodal($module, &$params, &$attribs)
 		}
 		.mod-preview-wrapper {
 			margin-bottom: .5rem;
+			pointer-events: none;
+			pacity: 0.5;
+		}
+		a.jmodedit {
+			display: none !important;
+			pointer-events: none;
 		}
 		a.select-link {
 		    color: #fff;
