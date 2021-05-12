@@ -62,6 +62,9 @@ function modChrome_outlinemodal($module, &$params, &$attribs)
 			display: none !important;
 			pointer-events: none;
 		}
+		a:not(.select-link) {
+			pointer-events: none;
+		}
 		a.select-link {
 		    color: #fff;
 		    font-size: 18px;
