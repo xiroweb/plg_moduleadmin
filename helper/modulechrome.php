@@ -56,7 +56,7 @@ function modChrome_outlinemodal($module, &$params, &$attribs)
 		.mod-preview-wrapper {
 			margin-bottom: .5rem;
 			pointer-events: none;
-			pacity: 0.5;
+			opacity: 0.5;
 		}
 		a.jmodedit {
 			display: none !important;
