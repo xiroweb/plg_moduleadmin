@@ -49,7 +49,7 @@ class ModulesModelModules extends JModelList
 				'position', 'a.position',
 				'pages',
 				'name', 'e.name',
-				'menuitem',  'roottemplate',
+				'menuitem',  'roottemplate', 'templateStyle',
 			);
 		}
 
